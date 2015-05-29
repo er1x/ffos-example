@@ -4,9 +4,9 @@ function getWeatherInfo(pos) {
                'lat=' + pos.coords.latitude +
                '&lon=' + pos.coords.longitude;
   $.getJSON(apiUrl, function(data) {
-    var msg = '';
     $('#currentWeather').text(data.weather[0].main + ': ' + data.weather[0].description);
     $('#city').text(data.name);
+    console.log('It\'s a trap!');
   });
 }
 
